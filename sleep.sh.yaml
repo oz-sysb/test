@@ -2,7 +2,6 @@
   description: |-
     テスト用
     備考：急にバッチが止まるともう一回バッチを再起動をすると大丈夫です<br>
-    aaaa
   executionEnabled: true
   group: テスト用処理
   id: 278bdaaf-2a96-4492-82ee-91f1db0bc232
