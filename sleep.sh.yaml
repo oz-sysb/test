@@ -1,0 +1,28 @@
+- defaultTab: summary
+  description: |-
+    テスト用
+    備考：急にバッチが止まるともう一回バッチを再起動をすると大丈夫です<br>
+    aaaa
+  executionEnabled: true
+  group: テスト用処理
+  id: 278bdaaf-2a96-4492-82ee-91f1db0bc232
+  loglevel: INFO
+  name: sleep.sh
+  nodeFilterEditable: false
+  schedule:
+    month: '*'
+    time:
+      hour: '*'
+      minute: 0/10
+      seconds: '0'
+    weekday:
+      day: '*'
+    year: '*'
+  scheduleEnabled: false
+  sequence:
+    commands:
+    - script: sleep 300s
+    keepgoing: false
+    strategy: node-first
+  uuid: 278bdaaf-2a96-4492-82ee-91f1db0bc232
+
