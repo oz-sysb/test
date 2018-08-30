@@ -4,7 +4,7 @@
   executionEnabled: true
   group: 'test'
   loglevel: INFO
-  name: 設定を画面からファイルを読み込ませて変更できる2.sh
+  name: 設定を画面からファイルを読み込ませて変更できる5.sh
   nodeFilterEditable: false
   scheduleEnabled: true
   sequence:
