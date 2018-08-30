@@ -1,6 +1,6 @@
 - defaultTab: summary
   description: |-
-    設定を画面からファイルを読み込ませて変更できる
+    設定を画面からファイルを読み込ませて変更できる<br>aaaa
   executionEnabled: true
   group: 'test'
   loglevel: INFO
