@@ -1,0 +1,25 @@
+- defaultTab: summary
+  description: |-
+    hogehoge<br>aaaa
+  executionEnabled: true
+  group: 'test'
+  loglevel: INFO
+  name: aaaa.sh
+  nodeFilterEditable: false
+  scheduleEnabled: true
+  sequence:
+    commands:
+    - script: sleep 10
+    keepgoing: false
+    strategy: node-first
+  schedule:
+    month: '1'
+    time:
+      hour: '09'
+      minute: '30'
+      seconds: '0'
+    weekday:
+      day: '1-2'
+    year: '*'
+  scheduleEnabled: true
+  uuid: 
