@@ -18,7 +18,7 @@
   scheduleEnabled: true
   sequence:
     commands:
-    - script: echo "Hello";
+    - script: echo "Bye";
     keepgoing: false
     strategy: node-first
   uuid: 324f32f9-1066-4fa3-ad73-fd9d33be53cb
