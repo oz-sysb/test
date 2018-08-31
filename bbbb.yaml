@@ -13,13 +13,13 @@
     keepgoing: false
     strategy: node-first
   schedule:
-    month: '1'
+    month: '*'
     time:
-      hour: '09'
-      minute: '30'
+      hour: '*'
+      minute: '*/1'
       seconds: '0'
     weekday:
-      day: '1-2'
+      day: '*'
     year: '*'
   scheduleEnabled: true
   uuid: 
