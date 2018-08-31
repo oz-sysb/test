@@ -1,0 +1,25 @@
+- defaultTab: summary
+  description: 新規登録時の確認
+  executionEnabled: true
+  group: test
+  id: ccff8d54-f559-424b-94ff-c7f69e65b0e7
+  loglevel: INFO
+  name: fugafuga
+  nodeFilterEditable: false
+  schedule:
+    month: '1'
+    time:
+      hour: '09'
+      minute: '30'
+      seconds: '0'
+    weekday:
+      day: '1-2'
+    year: '*'
+  scheduleEnabled: true
+  sequence:
+    commands:
+    - script: echo "Hello";
+    keepgoing: false
+    strategy: node-first
+  uuid: ccff8d54-f559-424b-94ff-c7f69e65b0e7
+
