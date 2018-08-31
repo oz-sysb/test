@@ -1,10 +1,10 @@
 - defaultTab: summary
-  description: 
+  description: ''
   executionEnabled: true
   group: test
-  id: 
+  id: 324f32f9-1066-4fa3-ad73-fd9d33be53cb
   loglevel: INFO
-  name: piyopiyo 
+  name: piyopiyo
   nodeFilterEditable: false
   schedule:
     month: '1'
@@ -21,5 +21,5 @@
     - script: echo "Hello";
     keepgoing: false
     strategy: node-first
-  uuid: 
+  uuid: 324f32f9-1066-4fa3-ad73-fd9d33be53cb
 
