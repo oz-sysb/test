@@ -1,0 +1,25 @@
+- defaultTab: summary
+  description: 設定
+  executionEnabled: true
+  group: test
+  id: f7035e2f-cb99-4bc7-8fc7-bb845ecd42ea
+  loglevel: INFO
+  name: ppppppppp
+  nodeFilterEditable: false
+  schedule:
+    month: '1'
+    time:
+      hour: '09'
+      minute: '30'
+      seconds: '0'
+    weekday:
+      day: '1-2'
+    year: '*'
+  scheduleEnabled: false
+  sequence:
+    commands:
+    - script: sleep 10
+    keepgoing: false
+    strategy: node-first
+  uuid: f7035e2f-cb99-4bc7-8fc7-bb845ecd42ea
+
