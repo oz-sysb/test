@@ -1,0 +1,25 @@
+- defaultTab: summary
+  description: test
+  executionEnabled: true
+  group: test
+  id: 2722cd5e-1ccf-4aca-b176-e1dbccab8328
+  loglevel: INFO
+  name: aaaa.sh
+  nodeFilterEditable: false
+  schedule:
+    month: '1'
+    time:
+      hour: '09'
+      minute: '30'
+      seconds: '0'
+    weekday:
+      day: '1-2'
+    year: '*'
+  scheduleEnabled: false
+  sequence:
+    commands:
+    - script: sleep 10
+    keepgoing: false
+    strategy: node-first
+  uuid: 2722cd5e-1ccf-4aca-b176-e1dbccab8328
+
