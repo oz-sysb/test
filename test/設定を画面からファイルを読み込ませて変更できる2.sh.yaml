@@ -1,0 +1,25 @@
+- defaultTab: summary
+  description: 修正
+  executionEnabled: true
+  group: test
+  id: ccb77478-b8f5-45f1-902f-4cc62aa12d65
+  loglevel: INFO
+  name: 設定を画面からファイルを読み込ませて変更できる2.sh
+  nodeFilterEditable: false
+  schedule:
+    month: '1'
+    time:
+      hour: '09'
+      minute: '30'
+      seconds: '0'
+    weekday:
+      day: '1-2'
+    year: '*'
+  scheduleEnabled: true
+  sequence:
+    commands:
+    - script: sleep 10
+    keepgoing: false
+    strategy: node-first
+  uuid: ccb77478-b8f5-45f1-902f-4cc62aa12d65
+

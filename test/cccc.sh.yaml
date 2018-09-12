@@ -1,0 +1,27 @@
+- defaultTab: summary
+  description: |-
+    cccc 
+    test
+  executionEnabled: true
+  group: test
+  id: 24e2cb2a-9ca9-4e0a-88f8-53a3c3d4b1e5
+  loglevel: INFO
+  name: cccc.sh
+  nodeFilterEditable: false
+  schedule:
+    month: '1'
+    time:
+      hour: '09'
+      minute: '30'
+      seconds: '0'
+    weekday:
+      day: '1-2'
+    year: '*'
+  scheduleEnabled: false
+  sequence:
+    commands:
+    - script: sleep 10
+    keepgoing: false
+    strategy: node-first
+  uuid: 24e2cb2a-9ca9-4e0a-88f8-53a3c3d4b1e5
+

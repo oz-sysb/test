@@ -1,0 +1,25 @@
+- defaultTab: summary
+  description: 設定を画面からファイルを読み込ませて変更できる
+  executionEnabled: true
+  group: test
+  id: 6f17d468-85a2-4f8e-a5bb-3f404605ccc5
+  loglevel: INFO
+  name: 設定を画面からファイルを読み込ませて変更できる3.sh
+  nodeFilterEditable: false
+  schedule:
+    month: '1'
+    time:
+      hour: '09'
+      minute: '30'
+      seconds: '0'
+    weekday:
+      day: '1-2'
+    year: '*'
+  scheduleEnabled: true
+  sequence:
+    commands:
+    - script: sleep 10
+    keepgoing: false
+    strategy: node-first
+  uuid: 6f17d468-85a2-4f8e-a5bb-3f404605ccc5
+

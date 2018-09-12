@@ -1,0 +1,25 @@
+- defaultTab: summary
+  description: DevlinからDynamoDBへの反映 その他利用分
+  executionEnabled: true
+  group: ポイント付与
+  id: a3606995-40d9-485e-b409-161299cac7c6
+  loglevel: INFO
+  name: update_bank_others_00
+  nodeFilterEditable: false
+  nodefilters:
+    dispatch:
+      excludePrecedence: true
+      keepgoing: false
+      rankOrder: ascending
+      successOnEmptyNodeFilter: false
+      threadcount: '1'
+    filter: 'name: rc-aslan'
+  nodesSelectedByDefault: true
+  scheduleEnabled: true
+  sequence:
+    commands:
+    - script: /batch_sh/update_bank_others_00.sh
+    keepgoing: false
+    strategy: node-first
+  uuid: a3606995-40d9-485e-b409-161299cac7c6
+
