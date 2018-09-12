@@ -1,0 +1,25 @@
+- defaultTab: summary
+  description: 後からジョブファイルの置き場が変わっても問題ないか？
+  executionEnabled: true
+  group: test
+  id: 4c0c955c-0d61-4844-aa26-aa18ab877b8d
+  loglevel: INFO
+  name: hogehoge
+  nodeFilterEditable: false
+  schedule:
+    month: '1'
+    time:
+      hour: '09'
+      minute: '30'
+      seconds: '0'
+    weekday:
+      day: '1-2'
+    year: '*'
+  scheduleEnabled: true
+  sequence:
+    commands:
+    - script: echo "Hello";
+    keepgoing: false
+    strategy: node-first
+  uuid: 4c0c955c-0d61-4844-aa26-aa18ab877b8d
+

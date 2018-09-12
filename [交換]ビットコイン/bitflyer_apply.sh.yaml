@@ -1,0 +1,75 @@
+- defaultTab: summary
+  description: |-
+    ビットコイン交換申請件を拾い、pointをbitcoinに交換するバッチ(Bitflyerのアカウントにbitcoin送金)
+    #### 接続DB
+    Devlin, Deedee, Daffy, DynamoDB
+    #### 起動時間の任意変更
+    不可(変えるときはハピタス運用チームと相談)
+    #### バッチの停止時の影響
+     - BITCOINの交換処理が遅延し、交換申請がたまって、ユーザーのポイントが減ったまま、処理されない状態に陥る。
+     - (バッチを再起動すれば、古いデータから拾い処理される。だが、1分に30件まで処理できるので、処理がたまると、交換処理に遅延が発生する。)
+     - BITCOIN交換で、交換完了まで最大15分以内と案内しているので、10分以上停止するのはリスクがある。
+    #### バッチの停止する時の注意事項
+     - 10分未満の停止なら許容範囲、なるべく人が利用しない時間が望まれる。
+     - 10分以上の長い時間の停止が必要な時には、ビットコイン交換を止めてからするかを決める必要がある。
+     - 30分以上の長い時間の停止が必要な時には、ビットコイン交換を止めてから停止する必要がある。
+     - このバッチを他のサーバーで回すときは、既存のcronを停止してから、他のサーバーで回るようにする必要がある。
+     - バッチを停止するときは、KILLすることはしないほうがいい。最後まで回るのを待つのがいい。
+     - KILLした場合か、バッチが途中で止まった場合は、以下の処理が必要になる。
+       - deedee.batch_logのデータの修正が必要です。
+       - (end_dateを直すか、該当するrowを削除するか、バッチの名前は、BitflyerTP::apply, BitflyerTP::statuscheck)
+       - bitflyer_exchange_dataの交換申請中(process_status=9)のデータを0にupdateして、交換を回すか、交換失敗に処理する必要がある。
+  executionEnabled: true
+  group: '[交換]ビットコイン'
+  id: a9cb1d7e-708a-4bcd-9259-4f93b7806393
+  loglevel: INFO
+  name: bitflyer_apply.sh
+  nodeFilterEditable: false
+  nodefilters:
+    dispatch:
+      excludePrecedence: true
+      keepgoing: false
+      rankOrder: ascending
+      successOnEmptyNodeFilter: false
+      threadcount: '1'
+    filter: witch
+  nodesSelectedByDefault: true
+  notification:
+    onavgduration:
+      plugin:
+        configuration:
+          webhook_url: https://hooks.slack.com/services/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
+        type: SlackNotification
+    onfailure:
+      plugin:
+        configuration:
+          webhook_url: https://hooks.slack.com/services/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
+        type: SlackNotification
+    onretryablefailure:
+      plugin:
+        configuration:
+          webhook_url: https://hooks.slack.com/services/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
+        type: SlackNotification
+    onsuccess:
+      plugin:
+        configuration:
+          webhook_url: https://hooks.slack.com/services/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
+        type: SlackNotification
+  notifyAvgDurationThreshold: +1s
+  schedule:
+    month: JUL
+    time:
+      hour: '09'
+      minute: '30'
+      seconds: '0'
+    weekday:
+      day: FRI,MON,THU,TUE,WED
+    year: '*'
+  scheduleEnabled: false
+  sequence:
+    commands:
+    - script: sleep 1
+    keepgoing: false
+    strategy: node-first
+  uuid: a9cb1d7e-708a-4bcd-9259-4f93b7806393
+

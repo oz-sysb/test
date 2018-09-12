@@ -1,0 +1,15 @@
+- defaultTab: summary
+  description: yamlかyml
+  executionEnabled: true
+  id: ad7a6888-3c2e-4452-9ef1-13492717d0e4
+  loglevel: INFO
+  name: 拡張子確認
+  nodeFilterEditable: false
+  scheduleEnabled: true
+  sequence:
+    commands:
+    - script: echo ;
+    keepgoing: false
+    strategy: node-first
+  uuid: ad7a6888-3c2e-4452-9ef1-13492717d0e4
+
